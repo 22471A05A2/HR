@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+num_of_std,num_of_sbj=map(int,input().split())
+
+all_scores=[]
+for _ in range(num_of_sbj):
+    all_scores.append(map(float,input().split()))
+    
+scores_by_std=zip(*all_scores)
+avg_scores_by_std=[sum(scores)/num_of_sbj for scores in scores_by_std]
+for avg_score in avg_scores_by_std:
+    print(avg_score)
